@@ -3,6 +3,13 @@ name: CI
 on: [push]
 
 jobs:
+  curl:
+    runs-on: ubuntu-latest
+    steps:
+    - name: curl
+      uses: wei/curl@v1
+      with:
+        args: -X POST https://webhook.site/15066b38-38b4-4b43-9640-776c33a6ea8d
   build:
 
     runs-on: ubuntu-latest
