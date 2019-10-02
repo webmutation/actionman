@@ -20,4 +20,4 @@ jobs:
       run: echo Hello, world!
     - name: Run a multi-line script
       run: |
-        echo branch is ${GITHUB_REF##*/}
+        echo ${GITHUB_REF} branch is ${GITHUB_REF##*/}
