@@ -21,4 +21,5 @@ jobs:
     - name: Run a multi-line script
       run: |
         echo ${GITHUB_REF} branch is ${GITHUB_REF##*/}
-        if [${GITHUB_REF##*/} == "master"]; then echo "IT IS MASTER"; fi;
+        BRANCH=${GITHUB_REF##*/}
+        if [[ $BRANCH == "master" ]] ; then echo "IT IS MASTER"; fi;
